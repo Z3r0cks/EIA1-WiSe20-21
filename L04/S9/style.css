@@ -1,0 +1,20 @@
+body {
+   background: url(".images/bg.png");
+}
+
+h1 {
+   margin: 0;
+}
+
+.contentWrapper {
+   background: url(".images/wrapperbg.png");
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: block;
+   position: absolute;
+   color: #fff;
+   width: 500px;
+   height: 300px;
+   padding: 50px;
+}

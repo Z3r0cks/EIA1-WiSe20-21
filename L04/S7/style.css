@@ -1,0 +1,58 @@
+body {
+   background: url("./images/bg.png");
+}
+
+h1 {
+   margin-top: 50px;
+   margin-bottom: 60px;
+}
+
+p {
+   max-width: 320px;
+}
+
+.contentWrapper {
+   background: url("./images/container.png");
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: block;
+   position: absolute;
+   color: #fff;
+   width: 500px;
+   height: 300px;
+   padding: 50px;
+}
+.stern1 {
+   position: absolute;
+   left: 135px;
+   top: 135px;
+}
+.stern2 {
+   position: absolute;
+   left: 503px;
+   top: 92px;
+}
+.stern3 {
+   position: absolute;
+   left: 395px;
+   top: 236px;
+}
+.fire {
+   width: 205px;
+   height: 320px;
+   position: absolute;
+   right: 23px;
+   top: 72px;
+}
+.asset1 {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+}
+
+.asset2 {
+   position: absolute;
+   top: -80px;
+   left: -60px;
+}

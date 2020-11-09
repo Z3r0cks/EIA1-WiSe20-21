@@ -1,0 +1,28 @@
+body {
+   background: url("./materials/images/bg.png");
+}
+
+.contentWrapper {
+   background: url("./materials/images/wrapperbg.png");
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: block;
+   position: absolute;
+   color: #fff;
+   width: 500px;
+   height: 300px;
+   padding: 50px;
+}
+
+.shell {
+   position: absolute;
+   left: -57px !important;
+   top: -70px;
+}
+
+.penguin {
+   position: absolute;
+   right: -57px !important;
+   bottom: 0;
+}

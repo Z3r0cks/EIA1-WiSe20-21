@@ -1,0 +1,50 @@
+body {
+   background: url("./images/bg.png");
+}
+
+.contentWrapper {
+   background: url("./images/wrapperbg.png");
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: block;
+   position: absolute;
+   color: #fff;
+   width: 500px;
+   height: 300px;
+   padding: 50px;
+}
+.star1,
+.star2,
+.star3,
+.star4 {
+   position: absolute;
+   width: 65px;
+   height: 65px;
+   background: url("./images/stern.png");
+   transition: 0.3s ease-in-out;
+}
+
+.star1:hover,
+.star2:hover,
+.star3:hover,
+.star4:hover {
+   background: url("./images/stern_hover.png");
+}
+
+.star1 {
+   top: 270px;
+   left: 450px;
+}
+.star2 {
+   top: 130px;
+   left: 380px;
+}
+.star3 {
+   top: 270px;
+   left: 240px;
+}
+.star4 {
+   top: 180px;
+   left: 80px;
+}
