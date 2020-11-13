@@ -1,5 +1,5 @@
 body {
-   background: url(".images/bg.png");
+   background: url("./images/bg.png");
 }
 
 h1 {
@@ -7,7 +7,7 @@ h1 {
 }
 
 .contentWrapper {
-   background: url(".images/wrapperbg.png");
+   background: url("./images/wrapperbg.png");
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
@@ -17,4 +17,31 @@ h1 {
    width: 500px;
    height: 300px;
    padding: 50px;
+}
+
+.role {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+}
+
+.snow1 {
+   position: absolute;
+   left: 156px;
+   animation: fall 7s infinite;
+}
+
+.snow2 {
+   position: absolute;
+   right: 132px;
+   animation: fall 7s infinite;
+}
+
+@keyframes fall {
+   from {
+      top: 0;
+   }
+   to {
+      top:366px;
+   }
 }
