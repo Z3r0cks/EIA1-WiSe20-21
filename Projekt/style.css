@@ -1,0 +1,16 @@
+html {
+   background-color: rgb(102, 102, 102);
+   color: #fff;
+}
+
+#wrapper {
+   font-family: Arial, Helvetica, sans-serif;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+#wrapper p{
+   font-size: 23px;
+}

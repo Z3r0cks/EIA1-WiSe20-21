@@ -6,12 +6,12 @@ h1 {
 }
 
 .contentWrapper {
+   position: absolute;
    background: url("./images/wrapperbg.png");
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
    display: block;
-   position: absolute;
    color: #fff;
    width: 500px;
    height: 300px;

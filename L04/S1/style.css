@@ -3,12 +3,25 @@ body {
 }
 
 .contentWrapper {
-   background: url("./materials/images/wrapperbg.png");
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   display: block;
+   /* Benutze position: absolute um das Objekt frei positionieren zu können */
    position: absolute;
+   
+   /* Verschiebe es dann 50% von oben nach unten ... */
+   top: 50%;
+
+   /* ... und 50% von links nach rechts von der Browsergröße */
+   left: 50%;
+   
+   /* Da dein Objekt aber eine gewisse größe hat, und der Browser die 50% immer vom oberen linken eckpunkt nimmt, 
+      musst du die hälfte der Breite und Höhe wieder zurück.
+      Da könntest du nun zwar manuell die pixel abziehen oder du benutzt diesen befehl */
+   transform: translate(-50%, -50%);
+   /* dieser zieht 50% von der Höhe und der Breite von der Objektgröße ab, bzw verschiebt es in die entsprechende Richtung */
+   /* bei mir ist der Wrapper die Karte selbst. Ich zentriere nicht über den Body */
+   
+
+   background: url("./materials/images/wrapperbg.png");
+   display: block;
    color: #fff;
    width: 500px;
    height: 300px;
@@ -26,3 +39,8 @@ body {
    right: -57px !important;
    bottom: 0;
 }
+
+
+
+
+
