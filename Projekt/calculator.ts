@@ -17,7 +17,7 @@ desc.innerHTML = "Benutze bitte ausschließelich für Addidtion, Subtraktion und
 submitBtn.innerText = "Berechnen";
 output.innerHTML = "Hier wird das Ergebnis angezeigt";
 
-function calcAddition(firstValue: number, SecondValue: number, operator: string): number {
+function calcAddition(firstValue: number, SecondValue: number, operator: string): void {
    
 }
 
