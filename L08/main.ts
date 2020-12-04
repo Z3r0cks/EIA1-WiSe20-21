@@ -29,13 +29,24 @@ namespace L07 {
    document.getElementById("app").appendChild(playBtn);
    document.getElementById("app").appendChild(stopBtn);
 
+   let test;
+
    playBtn.addEventListener('click', () => {
-      for (let i = 0; i < drumPadArray.length; i++) {
-         setInterval
-      }
+      test = setInterval(() => {
+         setTimeout(() => {
+            playSample((drumPadArray[4][1] as HTMLAudioElement))
+         }, 200);
+         setTimeout(() => {
+            playSample((drumPadArray[5][1] as HTMLAudioElement))
+         }, 400);
+         setTimeout(() => {
+            playSample((drumPadArray[6][1] as HTMLAudioElement))
+         }, 600);
+      }, 800)
    })
 
-   stopBtn.addEventListener('click', () => { 
+   stopBtn.addEventListener('click', () => {
+      console.log("test");
       clearInterval(test)
    })
 
