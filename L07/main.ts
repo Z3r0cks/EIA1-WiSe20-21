@@ -5,15 +5,15 @@ namespace L07 {
 
    const drumPadArray: (HTMLButtonElement | HTMLAudioElement | string)[][] = [
       // innerer Index        0                                1                   2            //außerer Index
-               [document.createElement("button"), new Audio('./assets/A.mp3'), "1f63d1"],             // 0
-               [document.createElement("button"), new Audio('./assets/C.mp3'), "1f63d1"],             // 1
-               [document.createElement("button"), new Audio('./assets/F.mp3'), "1f63d1"],             // 2
-               [document.createElement("button"), new Audio('./assets/G.mp3'), "F52692"],             // 3
-               [document.createElement("button"), new Audio('./assets/hihat.mp3'), "F52692"],         // 4
-               [document.createElement("button"), new Audio('./assets/kick.mp3'), "F52692"],          // 5
-               [document.createElement("button"), new Audio('./assets/snare.mp3'), "F52692"],         // 6
-               [document.createElement("button"), new Audio('./assets/laugh-1.mp3'), "CD700A"],       // 7
-               [document.createElement("button"), new Audio('./assets/laugh-2.mp3'), "CD700A"]        // 8 
+      [document.createElement("button"), new Audio('./assets/A.mp3'), "1f63d1"],             // 0
+      [document.createElement("button"), new Audio('./assets/C.mp3'), "1f63d1"],             // 1
+      [document.createElement("button"), new Audio('./assets/F.mp3'), "1f63d1"],             // 2
+      [document.createElement("button"), new Audio('./assets/G.mp3'), "F52692"],             // 3
+      [document.createElement("button"), new Audio('./assets/hihat.mp3'), "F52692"],         // 4
+      [document.createElement("button"), new Audio('./assets/kick.mp3'), "F52692"],          // 5
+      [document.createElement("button"), new Audio('./assets/snare.mp3'), "F52692"],         // 6
+      [document.createElement("button"), new Audio('./assets/laugh-1.mp3'), "CD700A"],       // 7
+      [document.createElement("button"), new Audio('./assets/laugh-2.mp3'), "CD700A"]        // 8 
    ]
 
    for (let i = 0; i < drumPadArray.length; i++) {
@@ -28,13 +28,9 @@ namespace L07 {
    playBtn.addEventListener('click', () => {
       setInterval(() => {
          playSample((drumPadArray[5][1] as HTMLAudioElement))
-         setTimeout(() => {
-            playSample((drumPadArray[6][1] as HTMLAudioElement))
-         }, 400);
-         setTimeout(() => {
-            playSample((drumPadArray[4][1] as HTMLAudioElement))
-         }, 800);
-      }, 1200)
+         playSample((drumPadArray[6][1] as HTMLAudioElement))
+         playSample((drumPadArray[4][1] as HTMLAudioElement))
+      }, 300)
    })
 
    function playSample(audio: HTMLAudioElement) {
