@@ -29,22 +29,12 @@ var L07;
     }
     document.getElementById("app").appendChild(playBtn);
     document.getElementById("app").appendChild(stopBtn);
-    var test;
     playBtn.addEventListener('click', function () {
-        test = setInterval(function () {
-            setTimeout(function () {
-                playSample(drumPadArray[4][1]);
-            }, 200);
-            setTimeout(function () {
-                playSample(drumPadArray[5][1]);
-            }, 400);
-            setTimeout(function () {
-                playSample(drumPadArray[6][1]);
-            }, 600);
-        }, 800);
+        for (var i = 0; i < drumPadArray.length; i++) {
+            setInterval;
+        }
     });
     stopBtn.addEventListener('click', function () {
-        console.log("test");
         clearInterval(test);
     });
     function playSample(audio) {
