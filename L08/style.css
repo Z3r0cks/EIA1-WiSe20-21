@@ -7,7 +7,7 @@ body {
    width: 150px;
    height: 150px;
    border-radius: 13px;
-   border: solid 2px #222; 
+   border: solid 2px #222;
 }
 
 .drumPad {
@@ -18,7 +18,20 @@ body {
    width: 462px;
 }
 
-.playBtn {
-   display: block;
-   margin: 0 auto;
+.iconWrapper {
+   margin: 2.5rem;
+   display: flex;
+   justify-content: space-between ;
+}
+
+#playBtn,
+#recordBtn,
+#stopBtn,
+#trashBtn {
+   font-size: 65px;
+   color:#eee;
+}
+
+.is-not-active {
+   display: none !important;
 }
