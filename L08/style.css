@@ -3,11 +3,16 @@ body {
 }
 
 .singlePad {
+   transition: all 0.2s;
    margin: 2px;
    width: 150px;
    height: 150px;
    border-radius: 13px;
    border: solid 2px #222;
+}
+
+.singlePad:hover {
+   opacity: 0.7;
 }
 
 .drumPad {
@@ -21,7 +26,15 @@ body {
 .iconWrapper {
    margin: 2.5rem;
    display: flex;
-   justify-content: space-between ;
+   justify-content: space-between;
+}
+
+.iconWrapper i {
+   transition: all 0.3s;
+}
+
+.iconWrapper i:hover {
+   opacity: 0.5;
 }
 
 #playBtn,
@@ -29,7 +42,7 @@ body {
 #stopBtn,
 #trashBtn {
    font-size: 65px;
-   color:#eee;
+   color: #eee;
 }
 
 .is-not-active {

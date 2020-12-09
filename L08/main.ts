@@ -3,7 +3,7 @@ namespace L07 {
    const stopBtn: HTMLElement = document.getElementById("stopBtn");
    const recordBtn: HTMLElement = document.getElementById("recordBtn");
    const trashBtn: HTMLElement = document.getElementById("trashBtn");
-   let index: number = 0;
+   let index: number;
    let ifRecording: boolean = false;
 
    let interval: number;
@@ -22,6 +22,7 @@ namespace L07 {
    for (let i: number = 0; i < drumPadArray.length; i++) {
       (drumPadArray[i][0] as HTMLButtonElement).className = "singlePad";
       (drumPadArray[i][0] as HTMLButtonElement).setAttribute("style", "background-image: linear-gradient(" + drumPadArray[i][2] + "," + drumPadArray[i][3] + ")");
+      (drumPadArray[i][0] as HTMLButtonElement).setAttribute("index", i.toString());
       (drumPadArray[i][0] as HTMLButtonElement).addEventListener("click", () => {
          if (!ifRecording) {
             (playSample((drumPadArray[i][1]) as HTMLAudioElement));
@@ -33,8 +34,10 @@ namespace L07 {
    let beatArray: HTMLAudioElement[] = [(drumPadArray[4][1] as HTMLAudioElement), (drumPadArray[5][1] as HTMLAudioElement), (drumPadArray[6][1] as HTMLAudioElement)];
 
    playBtn.addEventListener("click", () => {
+      ifRecording = false;
       setActiveBtn(playBtn, stopBtn);
       clearInterval(interval);
+      index = 0;
       interval = setInterval(() => {
          playBeats(beatArray);
       }, 600);
@@ -55,19 +58,24 @@ namespace L07 {
       clearInterval(interval);
       ifRecording = true;
       for (let i: number = 0; i < drumPadArray.length; i++) {
-         (drumPadArray[i][0] as HTMLButtonElement).addEventListener("click", () => {
-            if (ifRecording == true) {
-               beatArray.push(drumPadArray[i][1] as HTMLAudioElement);
-               console.log(beatArray);
-               interval = setInterval(() => {
-                  playBeats(beatArray);
-               }, 600);
-               setActiveBtn(playBtn, stopBtn);
-               ifRecording = false;
-            }
-         });
+         (drumPadArray[i][0] as HTMLButtonElement).addEventListener("click", recordSound);
       }
    });
+
+   function recordSound(e: Event): void {
+      if (ifRecording == true) {
+         beatArray.push(drumPadArray[(e.target as HTMLAudioElement).getAttribute("index")][1] as HTMLAudioElement);
+         console.log(beatArray);
+         index = 0;
+         interval = setInterval(() => {
+            playRecordBeats(beatArray);
+         }, 600);
+      }
+      for (let i: number = 0; i < drumPadArray.length; i++) {
+         (drumPadArray[i][0] as HTMLButtonElement).removeEventListener("click", recordSound);
+      }
+      ifRecording = false;
+   }
 
    function playSample(audio: HTMLAudioElement): void {
       audio.play();
@@ -77,9 +85,16 @@ namespace L07 {
       if (index < array.length) {
          playSample(array[index]);
          index++;
-      } else {
+      } else
          index = 0;
-      }
+   }
+
+   function playRecordBeats(array: HTMLAudioElement[]): void {
+      if (index < array.length) {
+         playSample(array[index]);
+         index++;
+      } else
+         clearInterval(interval);
    }
 
    function setActiveBtn(firstElement: HTMLElement, secondElement: HTMLElement): void {
