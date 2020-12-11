@@ -1,5 +1,8 @@
 var L07;
 (function (L07) {
+    // hier würde ich gerne eklären, wie ich die Aufgabe 8 gelöst habe.
+    // Wichtiger Hinweis: Ich erzeuge meine einzelnen Pads direkt in TypeScript und benutze dafür ein verschachtelten Array.
+    // Für das verstehen oder bestehen dieser Aufgabe ist dies aber nicht notwendig. Ich versuche es trotzdem zu erklären, für alle die es verstehen wollen.
     // Erzeugen der Variablen mit der Verbindung zu den entsprechenden Buttons
     var playBtn = document.getElementById("playBtn");
     var stopBtn = document.getElementById("stopBtn");
@@ -34,8 +37,10 @@ var L07;
         // dem selben Element gebe ich hier meine Farbe, ich benutze hier linear-Gradient, deshalb benötige ich zwei Farben ...
         // Das mache ich, indem ich dem eben genannten Element die Farben gebe, welche im selben inneren Arrayindex an stelle 2 und 3 steht
         drumPadArray[i][0].setAttribute("style", "background-image: linear-gradient(" + drumPadArray[i][2] + "," + drumPadArray[i][3] + ")");
+        // ##WICHTIG##
         // Hier erzeuge ich auf jedes Pad einen Eventlistener in dem ich dann die normale PlaySample Funktion übergebe ...
         // dann setzte ich eine Bedingunge mit if(recording), sobald ich also am recorden bin, soll auch die zweite Funktion ausgeführt werden.
+        // Falls ihr für jedes Pad einen eigenen Eventister benutzt, greift ihr nicht auf drumPadArray[i][0] zu, sondern auf das entsprechende Element.
         drumPadArray[i][0].addEventListener("click", function () {
             (playSample((drumPadArray[i][1])));
             if (recording) {
@@ -50,6 +55,8 @@ var L07;
     // welchen Typ ich hier genau benutze. Ich sage also z.B. (Element als HTMLButtonElemnt), oder (Element als HTMLAudioElemt).
     // Außerdem benötige ich zwei eckige Klammern [][], in der ersten kommt der äußere Arrayindex, in der zweitem der innere Arrayindex.
     // Der Äußere ist immer "i", da ich durch den For-Loop durch alle äußeren gehe und "i" sich immer um 1 erhöhrt.
+    // Wichtiger Hinweis: Die meisten von euch werden für jedes Pad einen eigenen Eventlistnerer haben, entsprechend ist die For-Schleife nicht notwendig.
+    // wichtig ist hier vor allem der Teil den ich mit ##WICHTIG## gekennzeichnet habe
     for (var i = 0; i < drumPadArray.length; i++) {
         _loop_1(i);
     }
