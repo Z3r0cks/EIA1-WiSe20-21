@@ -28,15 +28,15 @@ namespace L07 {
 
       //                        HTML-ELEMENTE      ,     AudioFlile mit Pfad    ,  Farben für mein Style         
       // innerer Arrayindex ->       0                               1                 2          3
-                  [document.createElement("button"), new Audio("./assets/A.mp3"), "#3D93F6", "#1F63D1"],          //           0
-                  [document.createElement("button"), new Audio("./assets/C.mp3"), "#3D93F6", "#1F63D1"],          //           1
-                  [document.createElement("button"), new Audio("./assets/F.mp3"), "#3D93F6", "#1F63D1"],          //           2
-                  [document.createElement("button"), new Audio("./assets/G.mp3"), "#FF5BB0", "#F0037E"],          //           3
-                  [document.createElement("button"), new Audio("./assets/hihat.mp3"), "#FF5BB0", "#F0037E"],      //           4
-                  [document.createElement("button"), new Audio("./assets/kick.mp3"), "#FF5BB0", "#F0037E"],       //           5
-                  [document.createElement("button"), new Audio("./assets/snare.mp3"), "#FF5BB0", "#F0037E"],      //           6
-                  [document.createElement("button"), new Audio("./assets/laugh-1.mp3"), "#F6A23D", "#C66601"],    //           7
-                  [document.createElement("button"), new Audio("./assets/laugh-2.mp3"), "#F6A23D", "#C66601"]     //           8
+      [document.createElement("button"), new Audio("./assets/A.mp3"), "#3D93F6", "#1F63D1"],          //           0
+      [document.createElement("button"), new Audio("./assets/C.mp3"), "#3D93F6", "#1F63D1"],          //           1
+      [document.createElement("button"), new Audio("./assets/F.mp3"), "#3D93F6", "#1F63D1"],          //           2
+      [document.createElement("button"), new Audio("./assets/G.mp3"), "#FF5BB0", "#F0037E"],          //           3
+      [document.createElement("button"), new Audio("./assets/hihat.mp3"), "#FF5BB0", "#F0037E"],      //           4
+      [document.createElement("button"), new Audio("./assets/kick.mp3"), "#FF5BB0", "#F0037E"],       //           5
+      [document.createElement("button"), new Audio("./assets/snare.mp3"), "#FF5BB0", "#F0037E"],      //           6
+      [document.createElement("button"), new Audio("./assets/laugh-1.mp3"), "#F6A23D", "#C66601"],    //           7
+      [document.createElement("button"), new Audio("./assets/laugh-2.mp3"), "#F6A23D", "#C66601"]     //           8
    ];
 
 
@@ -84,7 +84,7 @@ namespace L07 {
       setActiveBtn(playBtn, stopBtn);
       interval = setInterval(() => {
          playBeats(beatArray);
-      }, 600);
+      },                     600);
    });
 
    // mein Stop-Button, welche ein Eventlistener bekommt, mit dem ich das abspielen des Beats stoppe.

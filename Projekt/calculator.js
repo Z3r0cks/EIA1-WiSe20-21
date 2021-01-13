@@ -1,12 +1,12 @@
-var wrapper = document.getElementById("wrapper");
-var elementWrapper = [];
-var title = document.createElement("h1");
-var desc = document.createElement("p");
-var firstInput = document.createElement("input");
-var mathOperator = document.createElement("input");
-var secondInput = document.createElement("input");
-var submitBtn = document.createElement("button");
-var output = document.createElement("p");
+const wrapper = document.getElementById("wrapper");
+let elementWrapper = [];
+const title = document.createElement("h1");
+const desc = document.createElement("p");
+const firstInput = document.createElement("input");
+const mathOperator = document.createElement("input");
+const secondInput = document.createElement("input");
+const submitBtn = document.createElement("button");
+const output = document.createElement("p");
 firstInput.setAttribute('type', "number");
 secondInput.setAttribute('type', "number");
 title.innerHTML = "Willkommen bei meinem Operator";
@@ -16,7 +16,7 @@ output.innerHTML = "Hier wird das Ergebnis angezeigt";
 function calcAddition(firstValue, SecondValue, operator) {
 }
 elementWrapper.push(title, desc, firstInput, mathOperator, secondInput, submitBtn, output);
-elementWrapper.map(function (e) {
+elementWrapper.map(e => {
     wrapper.appendChild(e);
 });
 //# sourceMappingURL=calculator.js.map

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="main.js" defer></script>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body>
+   <div id="app" class="toDoApp">
+      <h1 class="heading">ToDo App</h1>
+      <p class="totalTasks"><span id=taskNumber></span> in total</p>
+      <input id="inputField" placeholder="add another Task" type="text">
+      <form id="toDoForm"></form>
+      <div class="deleteWrapper">
+         <p>Alle ToDos löschen</p>
+         <i id="deleteAllBtn" class="fas fa-trash-alt deleteBtn"></i>
+      </div>
+      <div class="deleteWrapper">
+         <p>Abgehakte ToDos löschen</p>
+         <i id="deleteAllBtnChecked" class="fas fa-trash-alt deleteBtn"></i>
+      </div>
+      <div class="deleteWrapper">
+         <p>Speichere ToDos</p>
+         <i id="saveToDos" class="fas fa-save saveBtn"></i>
+      </div>
+   </div>
+</body>
+
+</html>

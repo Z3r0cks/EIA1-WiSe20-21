@@ -1,0 +1,93 @@
+body {
+   background-color: #ddd;
+   font-family: Arial, Helvetica, sans-serif;
+   color: #666;
+}
+
+.toDoApp {
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%);
+   transition: all 0.2s;
+   margin: 2px;
+}
+
+.totalTasks,
+.heading {
+   text-align: center;
+}
+
+#inputField {
+   border: none;
+   height: 50px;
+   width: 600px;
+   font-size: 20px;
+   padding-left: 60px;
+}
+
+.toDoWrapper {
+   position: relative;
+   display: flex;
+   width: 651px;
+   background-color: #fff;
+   margin-top: 8px;
+   padding: 5px;
+}
+
+.delete {
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 30px;
+}
+
+.editBtn {
+   position: absolute;
+   right: 50px;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 30px;
+}
+
+.toDo {
+   margin: 0;
+   width: 40px;
+   height: 40px;
+}
+
+.toDoLabel {
+   align-self: center;
+   font-size: 20px;
+   margin-left: 15px;
+}
+
+.notHovered {
+   display: none !important;
+}
+
+.deleteWrapper {
+   display: flex;
+   padding: 1rem;
+   margin-top: 5px;
+   justify-content: space-between;
+   font-size: 30px;
+}
+
+.deleteWrapper p {
+   margin: 0;
+   padding-right: 20px;
+}
+
+.errorMsg {
+   text-align: center;
+   color: #fa0606;
+}
+
+.deleteBtn, .editBtn {
+   transition: all 0.2s;
+}
+
+.deleteBtn:hover, .editBtn:hover {
+   opacity: 0.6;
+}

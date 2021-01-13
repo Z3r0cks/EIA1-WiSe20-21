@@ -23,7 +23,7 @@ var example;
         ;
         document.querySelector(".chart").setAttribute('style', 'height:' + ((newValue / total) * 100) + '%');
     }
-    var myH2 = document.querySelector("#firstValue");
+    const myH2 = document.querySelector("#firstValue");
     console.log(myH2);
     changeCountryValue("Europa", europe18, europe08);
     changeCountryValue("Africa", africa18, africa08);
